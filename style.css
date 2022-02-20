@@ -1,0 +1,61 @@
+html {
+    height: 100vh;
+    width: 100vw;
+    background-color: lightgrey;
+}
+
+#stage {
+    background-color: slategray;
+    width: 60vw;
+    height: 10vh;
+    text-align: center;
+    margin: auto;
+    font-size: 7vh;
+}
+
+main {
+    padding-top: 10px;
+}
+#GA {
+    height: 10vh;
+    background-color: cornflowerblue;
+    width: 80vw;
+    text-align: center;
+    margin: auto;
+    padding-top: 5%;
+}
+
+#GA:hover {
+    background-color: darkblue;
+}
+
+#seat-container {
+    height: 58vh;
+    width: 90vw;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.row {
+    height: 5vh;
+    margin: auto;
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.seat {
+    height: 4vh;
+    width: 4vw;
+    background-color: cornflowerblue;
+    margin: auto;
+    text-align: center;
+    padding-top: 1%;
+}
+
+.seat:hover {
+    background-color: darkblue;
+}
