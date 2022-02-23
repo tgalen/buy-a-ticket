@@ -101,5 +101,16 @@ main {
     display: flex;
     width: 90vw;
     margin: auto;
-    justify-content: space-between;
+    justify-content: space-evenly;
+}
+
+.input-display {
+    background-color: azure;
+    height: 10vh;
+    width: 30vw;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: center;
 }
