@@ -7,7 +7,10 @@ let numOfTixPrompt = prompt("Please select the number of tickets to purchase.");
 let numOfTix = Number(numOfTixPrompt);
 console.log(numOfTix);
 
-let chnageSeatStatus = (divID) => {};
+let changeSeatStatus = (divID) => {
+    let clickedSeat = document.getElementById(divID);
+    clickedSeat.classList.contains("available-seat") ? (clickedSeat.className = "unavailable-seat") : (clickedSeat.className = "available-seat");
+};
 
 rows.forEach((row) => {
     let newRow = document.createElement("div");
@@ -15,9 +18,10 @@ rows.forEach((row) => {
     seatNums.forEach((seat) => {
         let newSeat = document.createElement("div");
         let seatValue = Math.random() * 100;
-        seatValue > seatAvailability ? newSeat.setAttribute("class", "available-seat") : newSeat.setAttribute("class", "unavailable-seat"); // add onlcick function to each button if 'available'
+        seatValue > seatAvailability ? newSeat.setAttribute("class", "available-seat") : newSeat.setAttribute("class", "unavailable-seat");
         newSeat.innerHTML = `${row}${seat}`;
         newSeat.setAttribute("id", `${row}${seat}`);
+        // document.getElementById(`${row}${seat}`).setAttribute("onclick", changeSeatStatus(`${row}${seat}`));
         newRow.appendChild(newSeat);
     });
     seatContainer.appendChild(newRow);
