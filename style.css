@@ -27,18 +27,21 @@ html {
     background-color: cornflowerblue;
     height: 15px;
     width: 15px;
+    margin-right: 5px;
 }
 
 #legend-unavailable-color {
     background-color: red;
     height: 15px;
     width: 15px;
+    margin-right: 5px;
 }
 
 #legend-selected-color {
     background-color: yellow;
     height: 15px;
     width: 15px;
+    margin-right: 5px;
 }
 
 main {
