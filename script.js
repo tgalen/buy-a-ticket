@@ -8,8 +8,8 @@ let numOfTix = Number(numOfTixPrompt);
 console.log(numOfTix);
 
 let changeSeatStatus = (divID) => {
-    let clickedSeat = document.getElementById(divID);
-    clickedSeat.classList.contains("available-seat") ? (clickedSeat.className = "unavailable-seat") : (clickedSeat.className = "available-seat");
+    // let clickedSeat = document.getElementById(divID);
+    // clickedSeat.className.contains("available-seat") ? (clickedSeat.className = "unavailable-seat") : (clickedSeat.className = "available-seat");
 };
 
 rows.forEach((row) => {
@@ -21,7 +21,7 @@ rows.forEach((row) => {
         seatValue > seatAvailability ? newSeat.setAttribute("class", "available-seat") : newSeat.setAttribute("class", "unavailable-seat");
         newSeat.innerHTML = `${row}${seat}`;
         newSeat.setAttribute("id", `${row}${seat}`);
-        // document.getElementById(`${row}${seat}`).setAttribute("onclick", changeSeatStatus(`${row}${seat}`));
+        newSeat.setAttribute("onclick", `changeSeatStatus(${row}${seat})`);
         newRow.appendChild(newSeat);
     });
     seatContainer.appendChild(newRow);
