@@ -13,6 +13,34 @@ html {
     font-size: 7vh;
 }
 
+#legend-container {
+    display: flex;
+    justify-content: center;
+}
+
+.legend-item {
+    display: flex;
+    margin: 1.5%;
+}
+
+#legend-available-color {
+    background-color: cornflowerblue;
+    height: 15px;
+    width: 15px;
+}
+
+#legend-unavailable-color {
+    background-color: red;
+    height: 15px;
+    width: 15px;
+}
+
+#legend-selected-color {
+    background-color: yellow;
+    height: 15px;
+    width: 15px;
+}
+
 main {
     padding-top: 10px;
 }
@@ -67,4 +95,11 @@ main {
     margin: auto;
     text-align: center;
     padding-top: 1%;
+}
+
+#form-container {
+    display: flex;
+    width: 90vw;
+    margin: auto;
+    justify-content: space-between;
 }
