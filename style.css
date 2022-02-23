@@ -100,6 +100,15 @@ main {
     padding-top: 1%;
 }
 
+.selected-seat {
+    background-color: yellow;
+    height: 4vh;
+    width: 4vw;
+    margin: auto;
+    text-align: center;
+    padding-top: 1%;
+}
+
 #form-container {
     display: flex;
     width: 90vw;
