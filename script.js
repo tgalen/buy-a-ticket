@@ -3,8 +3,11 @@ const rows = ["A", "B", "C", "D", "E", "F", "G", "H"];
 const seatNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 const seatAvailability = 50; // approx % of seats unavailable
 console.log(seatAvailability);
-let numOfTixPrompt = prompt("Please select the number of tickets to purchase.");
+let numOfTixPrompt = prompt("Please select the number of tickets to purchase.  Max purchasable = 5");
 let numOfTix = Number(numOfTixPrompt);
+if (numOfTix > 5) {
+    window.location.reload();
+}
 localStorage.clear();
 
 let changeSeatStatus = (divID) => {
