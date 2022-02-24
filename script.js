@@ -5,12 +5,12 @@ const seatAvailability = 50; // approx % of seats unavailable
 console.log(seatAvailability);
 let numOfTixPrompt = prompt("Please enter a number that represents the number of tickets you would like to purchase.  Min purchasable = 1 / Max purchasable = 5");
 let numOfTix = parseInt(numOfTixPrompt);
-console.log(typeof numOfTix);
 console.log(numOfTix);
-if (numOfTix < 1 && numOfTix > 5) {
+if (numOfTix < 1 || numOfTix > 5) {
     window.location.reload();
 }
 if (typeof numOfTix !== "number") {
+    // not working as intended
     window.location.reload();
 }
 
@@ -33,7 +33,6 @@ let changeSeatStatus = (divID) => {
         let removeReservedSeat = document.getElementById(`reserved${divID}`);
         removeReservedSeat.parentNode.removeChild(removeReservedSeat);
     }
-    console.log(savedSeat.length);
     if (savedSeat.length > numOfTix) {
         document.getElementById(`${savedSeat[0].innerHTML}`).setAttribute("class", "available-seat");
         display.removeChild(savedSeat[0]);
