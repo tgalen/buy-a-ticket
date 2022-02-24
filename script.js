@@ -5,11 +5,13 @@ const seatAvailability = 50; // approx % of seats unavailable
 console.log(seatAvailability);
 let numOfTixPrompt = prompt("Please select the number of tickets to purchase.");
 let numOfTix = Number(numOfTixPrompt);
+localStorage.clear();
 
 let changeSeatStatus = (divID) => {
     let clickedSeat = document.getElementById(divID);
     let seatToReserve = document.createElement("div");
     let display = document.getElementById("selected-display");
+    let savedSeat = document.getElementById("selected-display").getElementsByClassName("saved-seat");
     // clickedSeat.classList.contains("available-seat") ? clickedSeat.setAttribute("class", "selected-seat") : clickedSeat.setAttribute("class", "available-seat");
     // seatToReserve.innerHTML = `${divID}`;
     // display.appendChild(seatToReserve);
@@ -18,10 +20,16 @@ let changeSeatStatus = (divID) => {
         seatToReserve.innerHTML = `${divID}`;
         display.appendChild(seatToReserve);
         seatToReserve.setAttribute("id", `reserved${divID}`);
+        seatToReserve.setAttribute("class", "saved-seat");
     } else {
         clickedSeat.setAttribute("class", "available-seat");
         let removeReservedSeat = document.getElementById(`reserved${divID}`);
         removeReservedSeat.parentNode.removeChild(removeReservedSeat);
+    }
+    console.log(savedSeat.length);
+    if (savedSeat.length > numOfTix) {
+        document.getElementById(`${savedSeat[0].innerHTML}`).setAttribute("class", "available-seat");
+        display.removeChild(savedSeat[0]);
     }
 };
 

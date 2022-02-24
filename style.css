@@ -124,7 +124,7 @@ main {
 #input-display {
     background-color: azure;
     height: 10vh;
-    width: 30vw;
+    width: 50vw;
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
@@ -147,4 +147,5 @@ main {
     border-color: black;
     border-style: dotted;
     padding: 5px;
+    min-width: 3vw;
 }
