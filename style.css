@@ -89,6 +89,7 @@ main {
 
 .available-seat:hover {
     background-color: darkblue;
+    cursor: pointer;
 }
 
 .unavailable-seat {
@@ -109,6 +110,10 @@ main {
     padding-top: 1%;
 }
 
+.selected-seat:hover {
+    cursor: pointer;
+}
+
 #form-container {
     display: flex;
     width: 90vw;
@@ -116,7 +121,7 @@ main {
     justify-content: space-evenly;
 }
 
-.input-display {
+#input-display {
     background-color: azure;
     height: 10vh;
     width: 30vw;
@@ -125,4 +130,5 @@ main {
     border-radius: 10px;
     justify-content: center;
     text-align: center;
+    display: flex;
 }

@@ -5,12 +5,14 @@ const seatAvailability = 50; // approx % of seats unavailable
 console.log(seatAvailability);
 let numOfTixPrompt = prompt("Please select the number of tickets to purchase.");
 let numOfTix = Number(numOfTixPrompt);
-console.log(numOfTix);
 
 let changeSeatStatus = (divID) => {
-    console.log(divID);
     let clickedSeat = document.getElementById(divID);
+    let seatToReserve = document.createElement("div");
+    let display = document.getElementById("input-display");
     clickedSeat.classList.contains("available-seat") ? clickedSeat.setAttribute("class", "selected-seat") : clickedSeat.setAttribute("class", "available-seat");
+    seatToReserve.innerHTML = `${divID}`;
+    display.appendChild(seatToReservegit);
 };
 
 rows.forEach((row) => {
@@ -19,10 +21,16 @@ rows.forEach((row) => {
     seatNums.forEach((seat) => {
         let newSeat = document.createElement("div");
         let seatValue = Math.random() * 100;
-        seatValue > seatAvailability ? newSeat.setAttribute("class", "available-seat") : newSeat.setAttribute("class", "unavailable-seat");
+        // seatValue > seatAvailability ? newSeat.setAttribute("class", "available-seat") : newSeat.setAttribute("class", "unavailable-seat");
+        if (seatValue > seatAvailability) {
+            newSeat.setAttribute("class", "available-seat");
+            newSeat.setAttribute("onclick", `changeSeatStatus("${row}${seat}")`);
+        } else {
+            newSeat.setAttribute("class", "unavailable-seat");
+        }
         newSeat.innerHTML = `${row}${seat}`;
         newSeat.setAttribute("id", `${row}${seat}`);
-        newSeat.setAttribute("onclick", `changeSeatStatus("${row}${seat}")`);
+        // newSeat.setAttribute("onclick", `changeSeatStatus("${row}${seat}")`);
         newRow.appendChild(newSeat);
     });
     seatContainer.appendChild(newRow);
