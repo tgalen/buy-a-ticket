@@ -130,5 +130,17 @@ main {
     border-radius: 10px;
     justify-content: center;
     text-align: center;
+}
+
+#selected-display {
     display: flex;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    max-width: 30vh;
+}
+
+#selected-display > div {
+    background-color: yellow;
+    margin: auto;
 }

@@ -9,7 +9,7 @@ let numOfTix = Number(numOfTixPrompt);
 let changeSeatStatus = (divID) => {
     let clickedSeat = document.getElementById(divID);
     let seatToReserve = document.createElement("div");
-    let display = document.getElementById("input-display");
+    let display = document.getElementById("selected-display");
     // clickedSeat.classList.contains("available-seat") ? clickedSeat.setAttribute("class", "selected-seat") : clickedSeat.setAttribute("class", "available-seat");
     // seatToReserve.innerHTML = `${divID}`;
     // display.appendChild(seatToReserve);
