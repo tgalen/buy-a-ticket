@@ -142,5 +142,9 @@ main {
 
 #selected-display > div {
     background-color: yellow;
-    margin: auto;
+    margin: 2%;
+    border-width: 1px;
+    border-color: black;
+    border-style: dotted;
+    padding: 5px;
 }
