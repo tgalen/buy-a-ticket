@@ -10,9 +10,16 @@ let changeSeatStatus = (divID) => {
     let clickedSeat = document.getElementById(divID);
     let seatToReserve = document.createElement("div");
     let display = document.getElementById("input-display");
-    clickedSeat.classList.contains("available-seat") ? clickedSeat.setAttribute("class", "selected-seat") : clickedSeat.setAttribute("class", "available-seat");
-    seatToReserve.innerHTML = `${divID}`;
-    display.appendChild(seatToReservegit);
+    // clickedSeat.classList.contains("available-seat") ? clickedSeat.setAttribute("class", "selected-seat") : clickedSeat.setAttribute("class", "available-seat");
+    // seatToReserve.innerHTML = `${divID}`;
+    // display.appendChild(seatToReserve);
+    if (clickedSeat.classList.contains("available-seat")) {
+        clickedSeat.setAttribute("class", "selected-seat");
+        seatToReserve.innerHTML = `${divID}`;
+        display.appendChild(seatToReserve);
+    } else {
+        clickedSeat.setAttribute("class", "available-seat");
+    }
 };
 
 rows.forEach((row) => {
