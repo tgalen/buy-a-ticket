@@ -17,8 +17,11 @@ let changeSeatStatus = (divID) => {
         clickedSeat.setAttribute("class", "selected-seat");
         seatToReserve.innerHTML = `${divID}`;
         display.appendChild(seatToReserve);
+        seatToReserve.setAttribute("id", `reserved${divID}`);
     } else {
         clickedSeat.setAttribute("class", "available-seat");
+        let removeReservedSeat = document.getElementById(`reserved${divID}`);
+        removeReservedSeat.parentNode.removeChild(removeReservedSeat);
     }
 };
 
