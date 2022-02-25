@@ -50,6 +50,8 @@ html {
     text-align: center;
     justify-content: center;
     height: 5vh;
+    width: 60vw;
+    background-color: aquamarine;
 }
 
 main {
@@ -81,6 +83,7 @@ main {
     margin: auto;
     text-align: center;
     padding-top: 1%;
+    border-radius: 5px;
 }
 
 .available-seat:hover {
@@ -95,6 +98,7 @@ main {
     margin: auto;
     text-align: center;
     padding-top: 1%;
+    border-radius: 5px;
 }
 
 .selected-seat {
