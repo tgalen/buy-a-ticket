@@ -25,6 +25,18 @@
                     <div>Selected</div>
                 </div>
             </div>
+            <div id="slider-container">
+                <div id="slider-text">How many seats do you need?</div>
+                <input type="range" min="1" max="5" value="1" id="ticket-slider" step="1" list="num-of-tix" onload="updateNumOfTix(value)" onchange="updateNumOfTix(value)"></input><div id="num-of-tix-display"></div>
+                <datalist id="num-of-tix">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </datalist>
+                
+            </div>
         </header>
         <main id="seat-chart">
             <div id="seat-container">               

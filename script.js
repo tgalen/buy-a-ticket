@@ -2,17 +2,14 @@ const seatContainer = document.getElementById("seat-container");
 const rows = ["A", "B", "C", "D", "E", "F", "G", "H"];
 const seatNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 const seatAvailability = 50; // approx % of seats unavailable
-console.log(seatAvailability);
-let numOfTixPrompt = prompt("Please enter a number that represents the number of tickets you would like to purchase.  Min purchasable = 1 / Max purchasable = 5");
-let numOfTix = parseInt(numOfTixPrompt);
-console.log(numOfTix);
-if (numOfTix < 1 || numOfTix > 5) {
-    window.location.reload();
-}
-if (typeof numOfTix !== "number") {
-    // not working as intended
-    window.location.reload();
-}
+
+let numOfTix = parseInt(document.getElementById("ticket-slider").value);
+let tixNumDisplay = document.getElementById("num-of-tix-display");
+tixNumDisplay.innerHTML = numOfTix;
+let updateNumOfTix = (num) => {
+    numOfTix = num;
+    tixNumDisplay.innerHTML = numOfTix;
+};
 
 let changeSeatStatus = (divID) => {
     let clickedSeat = document.getElementById(divID);

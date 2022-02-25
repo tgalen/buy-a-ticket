@@ -31,7 +31,7 @@ html {
 }
 
 #legend-unavailable-color {
-    background-color: red;
+    background-color: darkslategray;
     height: 15px;
     width: 15px;
     margin-right: 5px;
@@ -42,6 +42,25 @@ html {
     height: 15px;
     width: 15px;
     margin-right: 5px;
+}
+
+#slider-container {
+    text-align: center;
+    background-color: azure;
+    padding: 1%;
+    width: 20vw;
+    margin: auto;
+    border-radius: 3px;
+}
+
+#num-of-tix-display {
+    background-color: yellow;
+    margin: auto;
+    border-width: 1px;
+    border-color: black;
+    border-style: dotted;
+    padding: 5px;
+    width: 3vw;
 }
 
 main {
@@ -93,7 +112,7 @@ main {
 }
 
 .unavailable-seat {
-    background-color: red;
+    background-color: darkslategrey;
     height: 4vh;
     width: 4vw;
     margin: auto;
