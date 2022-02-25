@@ -44,39 +44,16 @@ html {
     margin-right: 5px;
 }
 
-#slider-container {
+#num-of-seats-input {
+    margin: auto;
+    padding: 0%;
     text-align: center;
-    background-color: azure;
-    padding: 1%;
-    width: 20vw;
-    margin: auto;
-    border-radius: 3px;
-}
-
-#num-of-tix-display {
-    background-color: yellow;
-    margin: auto;
-    border-width: 1px;
-    border-color: black;
-    border-style: dotted;
-    padding: 5px;
-    width: 3vw;
+    justify-content: center;
+    height: 5vh;
 }
 
 main {
     padding-top: 10px;
-}
-#GA {
-    height: 10vh;
-    background-color: cornflowerblue;
-    width: 80vw;
-    text-align: center;
-    margin: auto;
-    padding-top: 5%;
-}
-
-#GA:hover {
-    background-color: darkblue;
 }
 
 #seat-container {
