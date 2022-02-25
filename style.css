@@ -44,7 +44,7 @@ html {
     margin-right: 5px;
 }
 
-#num-of-seats-input {
+#input-container {
     margin: auto;
     padding: 0%;
     text-align: center;
@@ -52,6 +52,18 @@ html {
     height: 5vh;
     width: 60vw;
     background-color: aquamarine;
+    display: flex;
+    border-radius: 5px;
+}
+
+#num-of-seats-input {
+    margin: auto;
+    justify-content: center;
+    height: 10px;
+}
+
+input[type="text"] {
+    width: 30px;
 }
 
 main {
