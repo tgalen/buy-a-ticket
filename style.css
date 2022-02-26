@@ -96,6 +96,7 @@ main {
     text-align: center;
     padding-top: 1%;
     border-radius: 5px;
+    font-size: 0.75em;
 }
 
 .available-seat:hover {
@@ -111,6 +112,7 @@ main {
     text-align: center;
     padding-top: 1%;
     border-radius: 5px;
+    font-size: 0.75em;
 }
 
 .selected-seat {
@@ -120,6 +122,7 @@ main {
     margin: auto;
     text-align: center;
     padding-top: 1%;
+    font-size: 0.75em;
 }
 
 .selected-seat:hover {
@@ -128,7 +131,7 @@ main {
 
 #form-container {
     display: flex;
-    width: 90vw;
+    width: 45vw;
     margin: auto;
     justify-content: space-evenly;
 }
@@ -136,7 +139,7 @@ main {
 #input-display {
     background-color: azure;
     height: 10vh;
-    width: 50vw;
+    width: 40vw;
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
@@ -159,5 +162,6 @@ main {
     border-color: black;
     border-style: dotted;
     padding: 5px;
-    min-width: 3vw;
+    min-width: 2vw;
+    font-size: 0.75em;
 }
