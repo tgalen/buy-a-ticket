@@ -139,7 +139,7 @@ main {
 #input-display {
     background-color: azure;
     height: 10vh;
-    width: 100vw;
+    width: 200vw;
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
@@ -175,6 +175,10 @@ main {
     margin: auto;
     opacity: 0.5;
     border-radius: 5px;
+    height: 7vh;
+    padding: 10%;
+    background-color: darkblue;
+    background-image: linear-gradient(to bottom right, rgb(189, 189, 189), rgb(193, 201, 216), white);
 }
 
 #confirm-purchase:hover {
