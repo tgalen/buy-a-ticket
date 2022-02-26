@@ -139,7 +139,7 @@ main {
 #input-display {
     background-color: azure;
     height: 10vh;
-    width: 40vw;
+    width: 100vw;
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
@@ -164,4 +164,19 @@ main {
     padding: 5px;
     min-width: 2vw;
     font-size: 0.75em;
+}
+
+#btn-container {
+    margin: auto;
+    width: 100vw;
+}
+
+#confirm-purchase {
+    margin: auto;
+    opacity: 0.5;
+    border-radius: 5px;
+}
+
+#confirm-purchase:hover {
+    cursor: pointer;
 }

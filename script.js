@@ -4,6 +4,10 @@ const seatNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
 const seatAvailability = 50; // approx % of seats unavailable
 const maxNumTix = 8;
 let numOfSeatsSelected = 0;
+let confirmBtn = document.getElementById("confirm-purchase");
+if (numOfSeatsSelected < 1) {
+    confirmBtn.style.pointerEvents = "none";
+}
 
 let changeSeatStatus = (divID) => {
     let clickedSeat = document.getElementById(divID);
@@ -26,6 +30,13 @@ let changeSeatStatus = (divID) => {
         display.removeChild(savedSeat[0]);
     }
     numOfSeatsSelected = savedSeat.length;
+    if (numOfSeatsSelected < 1) {
+        confirmBtn.style.pointerEvents = "none";
+        confirmBtn.style.opacity = "0.5";
+    } else {
+        confirmBtn.style.pointerEvents = "auto";
+        confirmBtn.style.opacity = "1";
+    }
     console.log(numOfSeatsSelected);
 };
 
